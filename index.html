@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Find your next opportunity with LaunchPad Jobs." />
+  <title>LaunchPad — Find work that moves you forward</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="LaunchPad home"><span class="brand-mark">L</span> launchpad<span class="brand-dot">.</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#jobs">Find jobs</a>
+      <a href="#companies">Companies</a>
+      <a href="#career">Career resources</a>
+    </nav>
+    <div class="header-actions">
+      <button class="btn btn-quiet" id="signInBtn">Sign in</button>
+      <button class="btn btn-dark" id="createProfileBtn">Create profile <span>↗</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-glow"></div>
+      <div class="hero-content">
+        <div class="eyebrow"><span class="live-dot"></span> YOUR NEXT CHAPTER STARTS HERE</div>
+        <h1>Your work should<br>take you <em>somewhere.</em></h1>
+        <p class="hero-copy">Discover opportunities that match your skills, your goals, and the future you're building.</p>
+        <form class="search-panel" id="searchForm">
+          <label class="search-field">
+            <span class="field-icon">⌕</span>
+            <span class="sr-only">Job title or keyword</span>
+            <input id="keywordInput" type="search" placeholder="Job title, skill, or company" />
+          </label>
+          <span class="search-divider"></span>
+          <label class="search-field location-field">
+            <span class="field-icon">⌖</span>
+            <span class="sr-only">Location</span>
+            <input id="locationInput" type="text" placeholder="City or remote" />
+          </label>
+          <button class="btn btn-accent search-btn" type="submit">Search jobs <span>→</span></button>
+        </form>
+        <div class="popular-searches"><span>Popular:</span>
+          <button class="keyword-chip" data-keyword="Data Analyst">Data Analyst</button>
+          <button class="keyword-chip" data-keyword="Software Engineer">Software Engineer</button>
+          <button class="keyword-chip" data-keyword="Product Designer">Product Designer</button>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="art-card floating-card">
+          <div class="mini-label">YOUR CAREER MOMENTUM</div>
+          <div class="growth-number">+28% <span>↗</span></div>
+          <div class="growth-caption">More relevant opportunities</div>
+          <div class="chart-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+        <div class="art-card match-card">
+          <div class="match-icon">✓</div><div><strong>Great match!</strong><small>Skills aligned with role</small></div><span class="match-score">94%</span>
+        </div>
+        <div class="art-star">✳</div><div class="art-spark">✦</div>
+      </div>
+      <div class="hero-bottom">
+        <div><strong>12k+</strong><span>sample opportunities</span></div>
+        <div class="hero-bottom-line"></div>
+        <div><strong>850+</strong><span>companies to explore</span></div>
+        <div class="hero-bottom-line"></div>
+        <div><strong>One goal</strong><span>your next great move</span></div>
+      </div>
+    </section>
+
+    <section class="section category-section">
+      <div class="section-heading">
+        <div><div class="eyebrow">EXPLORE YOUR OPTIONS</div><h2>Find your kind of work.</h2></div>
+        <a class="text-link" href="#jobs">Explore all jobs <span>↗</span></a>
+      </div>
+      <div class="category-grid">
+        <button class="category-card" data-category="Technology"><span class="category-icon icon-lilac">⌘</span><strong>Technology</strong><span>1,240 roles <b>↗</b></span></button>
+        <button class="category-card" data-category="Data & Analytics"><span class="category-icon icon-mint">▥</span><strong>Data & Analytics</strong><span>860 roles <b>↗</b></span></button>
+        <button class="category-card" data-category="Design"><span class="category-icon icon-peach">✳</span><strong>Design & Creative</strong><span>540 roles <b>↗</b></span></button>
+        <button class="category-card" data-category="Marketing"><span class="category-icon icon-yellow">↗</span><strong>Marketing</strong><span>390 roles <b>↗</b></span></button>
+        <button class="category-card" data-category="Business"><span class="category-icon icon-blue">◫</span><strong>Business</strong><span>620 roles <b>↗</b></span></button>
+      </div>
+    </section>
+
+    <section class="section jobs-section" id="jobs">
+      <div class="section-heading jobs-heading">
+        <div><div class="eyebrow">HANDPICKED FOR YOU</div><h2>Roles worth a look.</h2><p class="section-subtitle">A few places to start your next chapter.</p></div>
+        <div class="job-controls">
+          <label class="filter-label">Experience
+            <select id="experienceFilter"><option value="all">All levels</option><option value="Fresher">Fresher</option><option value="0–2 years">0–2 years</option><option value="3–5 years">3–5 years</option></select>
+          </label>
+          <label class="filter-label">Work type
+            <select id="workTypeFilter"><option value="all">Any type</option><option value="Remote">Remote</option><option value="Hybrid">Hybrid</option><option value="On-site">On-site</option></select>
+          </label>
+        </div>
+      </div>
+      <div class="results-note" id="resultsNote">Showing featured opportunities <span>•</span> Demo listings</div>
+      <div class="job-list" id="jobList"></div>
+      <div class="empty-state" id="emptyState" hidden><span>⌕</span><h3>No matching roles just yet</h3><p>Try a different keyword or clear your filters.</p><button class="btn btn-dark" id="clearFiltersBtn">Clear filters</button></div>
+      <div class="center-action"><button class="btn btn-outline" id="showAllBtn">Show all opportunities <span>→</span></button></div>
+    </section>
+
+    <section class="company-section" id="companies">
+      <div class="section company-inner">
+        <div class="company-copy"><div class="eyebrow">GOOD PEOPLE. GOOD WORK.</div><h2>Find a team<br>you can <em>grow with.</em></h2><p>Look beyond the job title. Discover teams, work styles, and missions that fit the way you want to work.</p><a class="btn btn-light" href="#jobs">Explore opportunities <span>↗</span></a></div>
+        <div class="company-visual">
+          <div class="company-orb orb-a"></div><div class="company-orb orb-b"></div>
+          <div class="company-tile tile-one"><span class="company-symbol symbol-orange">✳</span><div><strong>Northstar Labs</strong><small>Technology · 18 open roles</small></div><span class="tile-arrow">↗</span></div>
+          <div class="company-tile tile-two"><span class="company-symbol symbol-green">◈</span><div><strong>Verde Finance</strong><small>Finance · 12 open roles</small></div><span class="tile-arrow">↗</span></div>
+          <div class="company-tile tile-three"><span class="company-symbol symbol-purple">◉</span><div><strong>Studio Form</strong><small>Design · 9 open roles</small></div><span class="tile-arrow">↗</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section steps-section" id="career">
+      <div class="section-heading"><div><div class="eyebrow">A BETTER WAY TO GET STARTED</div><h2>Small steps. Big moves.</h2></div></div>
+      <div class="steps-grid">
+        <article class="step-card"><span class="step-number">01</span><div class="step-icon">◎</div><h3>Build your profile</h3><p>Showcase your skills, projects, and the work you want to do next.</p></article>
+        <article class="step-card"><span class="step-number">02</span><div class="step-icon">⌕</div><h3>Find your fit</h3><p>Use keywords and filters to discover roles that match your goals.</p></article>
+        <article class="step-card"><span class="step-number">03</span><div class="step-icon">↗</div><h3>Make your move</h3><p>Save promising roles and follow the application instructions.</p></article>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="cta-pattern"></div><div class="cta-content"><div class="eyebrow">YOUR NEXT CHAPTER IS OUT THERE</div><h2>Ready to make<br>your next move?</h2><p>Start exploring. Your future doesn't need to wait.</p><button class="btn btn-dark" id="ctaBrowseBtn">Browse open roles <span>→</span></button></div><div class="cta-stamp">GO<br>FOR<br>IT<span>✳</span></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="brand footer-brand" href="#"><span class="brand-mark">L</span> launchpad<span class="brand-dot">.</span></a><p>Made for the next step in your career.</p><div class="footer-links"><a href="#jobs">Find jobs</a><a href="#companies">Companies</a><a href="#career">Career resources</a></div><small>© 2026 LaunchPad. Demo website — listings are illustrative.</small></footer>
+
+  <dialog id="profileDialog" class="profile-dialog">
+    <form method="dialog" class="dialog-close-form"><button class="dialog-close" aria-label="Close">×</button></form>
+    <div class="dialog-mark">L</div><div class="eyebrow">START WITH YOU</div><h2 id="dialogTitle">Create your profile</h2><p id="dialogDescription">A few details to help you take the next step.</p>
+    <form id="profileForm" class="profile-form">
+      <label>Full name<input id="profileName" required placeholder="Your name"></label>
+      <label>Email address<input id="profileEmail" type="email" required placeholder="you@example.com"></label>
+      <label>Career interest<input id="profileInterest" required placeholder="e.g. Data Analyst"></label>
+      <button class="btn btn-accent" type="submit" id="profileSubmit">Create demo profile <span>→</span></button>
+    </form>
+    <p class="dialog-footnote">Demo only. Your details stay in this page and are not sent to a server.</p>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
